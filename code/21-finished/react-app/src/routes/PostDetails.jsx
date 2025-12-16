@@ -1,9 +1,8 @@
-import { useLoaderData, Link } from 'react-router-dom';
+import { useLoaderData, Link } from "react-router-dom";
+import { Modal } from "../components/Modal";
+import classes from "./PostDetails.module.css";
 
-import {Modal} from '../components/Modal';
-import classes from './PostDetails.module.css';
-
-export const PostDetails() {
+export const PostDetails = () => {
   const post = useLoaderData();
 
   if (!post) {
@@ -29,12 +28,10 @@ export const PostDetails() {
       </main>
     </Modal>
   );
-}
+};
 
-export default PostDetails;
-
-export async export const loader({params}) {
-  const response = await fetch('http://localhost:8080/posts/' + params.postId);
+export const loader = async ({ params }) => {
+  const response = await fetch("http://localhost:8080/posts/" + params.postId);
   const resData = await response.json();
   return resData.post;
-}
+};

@@ -1,7 +1,6 @@
-import { Link } from 'react-router-dom';
-import { MdPostAdd, MdMessage } from 'react-icons/md';
-
-import classes from './MainHeader.module.css';
+import { Link } from "react-router-dom";
+import { MdPostAdd, MdMessage } from "react-icons/md";
+import classes from "./MainHeader.module.css";
 
 export const MainHeader = () => {
   return (
@@ -11,13 +10,11 @@ export const MainHeader = () => {
         React Poster
       </h1>
       <p>
-        <Link to="/create-post" className={classes.button} >
+        <Link to="/create-post" className={classes.button}>
           <MdPostAdd size={18} />
           New Post
         </Link>
       </p>
     </header>
   );
-}
-
-
+};
