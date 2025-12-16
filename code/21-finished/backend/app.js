@@ -1,11 +1,10 @@
-const express = require('express');
-const bodyParser = require('body-parser');
-
-const { getStoredPosts, storePosts } = require('./data/posts');
+import express from 'express';
+import { getStoredPosts, storePosts } from './data/posts.js';
 
 const app = express();
 
-app.use(bodyParser.json());
+app.use(express.urlencoded({extended: true})); 
+app.use(express.json());
 
 app.use((req, res, next) => {
   // Attach CORS headers
@@ -40,4 +39,6 @@ app.post('/posts', async (req, res) => {
   res.status(201).json({ message: 'Stored new post.', post: newPost });
 });
 
-app.listen(8080);
+app.listen(8080, '', ()=>{
+  console.log("listening to port:8080")
+});
