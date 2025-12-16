@@ -1,12 +1,12 @@
 import { useLoaderData } from 'react-router-dom';
 
-import Post from './Post';
+import {Post} from './Post';
 import classes from './PostsList.module.css';
 
 export const PostsList() {
   const posts = useLoaderData();
 
-  export const addPostHandler(postData) {
+  const addPostHandler = (postData) => {
     fetch('http://localhost:8080/posts', {
       method: 'POST',
       body: JSON.stringify(postData),

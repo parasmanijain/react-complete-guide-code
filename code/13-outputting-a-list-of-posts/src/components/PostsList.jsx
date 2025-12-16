@@ -1,16 +1,15 @@
-import { useState } from 'react';
+import { useState } from "react";
+import { Post } from "./Post";
+import { NewPost } from "./NewPost";
+import { Modal } from "./Modal";
+import classes from "./PostsList.module.css";
 
-import Post from './Post';
-import NewPost from './NewPost';
-import Modal from './Modal';
-import classes from './PostsList.module.css';
-
-export const PostsList({ isPosting, onStopPosting }) {
+export const PostsList = ({ isPosting, onStopPosting }) => {
   const [posts, setPosts] = useState([]);
 
-  export const addPostHandler(postData) {
+  const addPostHandler = (postData) => {
     setPosts((existingPosts) => [postData, ...existingPosts]);
-  }
+  };
 
   return (
     <>
@@ -27,13 +26,11 @@ export const PostsList({ isPosting, onStopPosting }) {
         </ul>
       )}
       {posts.length === 0 && (
-        <div style={{ textAlign: 'center', color: 'white' }}>
+        <div style={{ textAlign: "center", color: "white" }}>
           <h2>There are no posts yet.</h2>
           <p>Start adding some!</p>
         </div>
       )}
     </>
   );
-}
-
-
+};

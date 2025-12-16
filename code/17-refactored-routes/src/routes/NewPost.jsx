@@ -7,15 +7,15 @@ export const NewPost({ onCancel, onAddPost }) {
   const [enteredBody, setEnteredBody] = useState('');
   const [enteredAuthor, setEnteredAuthor] = useState('');
 
-  export const bodyChangeHandler(event) {
+   const bodyChangeHandler = (event) => {
     setEnteredBody(event.target.value);
   }
 
-  export const authorChangeHandler(event) {
+  const authorChangeHandler = (event) => {
     setEnteredAuthor(event.target.value);
   }
 
-  export const submitHandler(event) {
+  const submitHandler = (event) => {
     event.preventDefault();
     const postData = {
       body: enteredBody,

@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 
-import Post from './Post';
+import {Post} from './Post';
 import classes from './PostsList.module.css';
 
 export const PostsList() {
@@ -8,7 +8,7 @@ export const PostsList() {
   const [isFetching, setIsFetching] = useState(false);
 
   useEffect(() => {
-    async export const fetchPosts() {
+    const fetchPosts = async () => {
       setIsFetching(true);
       const response = await fetch('http://localhost:8080/posts');
       const resData = await response.json();
@@ -19,7 +19,7 @@ export const PostsList() {
     fetchPosts();
   }, []);
 
-  export const addPostHandler(postData) {
+  const addPostHandler = (postData) => {
     fetch('http://localhost:8080/posts', {
       method: 'POST',
       body: JSON.stringify(postData),

@@ -1,28 +1,27 @@
-import { useState } from 'react';
+import { useState } from "react";
+import classes from "./NewPost.module.css";
 
-import classes from './NewPost.module.css';
+export const NewPost = ({ onCancel, onAddPost }) => {
+  const [enteredBody, setEnteredBody] = useState("");
+  const [enteredAuthor, setEnteredAuthor] = useState("");
 
-export const NewPost({ onCancel, onAddPost }) {
-  const [enteredBody, setEnteredBody] = useState('');
-  const [enteredAuthor, setEnteredAuthor] = useState('');
-
-  export const bodyChangeHandler(event) {
+  const bodyChangeHandler = (event) => {
     setEnteredBody(event.target.value);
-  }
+  };
 
-  export const authorChangeHandler(event) {
+  const authorChangeHandler = (event) => {
     setEnteredAuthor(event.target.value);
-  }
+  };
 
-  export const submitHandler(event) {
+  const submitHandler = (event) => {
     event.preventDefault();
     const postData = {
       body: enteredBody,
-      author: enteredAuthor
+      author: enteredAuthor,
     };
     onAddPost(postData);
     onCancel();
-  }
+  };
 
   return (
     <form className={classes.form} onSubmit={submitHandler}>
@@ -42,6 +41,4 @@ export const NewPost({ onCancel, onAddPost }) {
       </p>
     </form>
   );
-}
-
-
+};

@@ -1,18 +1,17 @@
-import { useState } from 'react';
-
-import PostsList from './components/PostsList';
-import MainHeader from './components/MainHeader';
+import { useState } from "react";
+import { PostsList } from "./components/PostsList";
+import { MainHeader } from "./components/MainHeader";
 
 export const App = () => {
   const [modalIsVisible, setModalIsVisible] = useState(false);
 
-  const showModalHandler = () =>{
+  const showModalHandler = () => {
     setModalIsVisible(true);
-  }
+  };
 
   const hideModalHandler = () => {
     setModalIsVisible(false);
-  }
+  };
 
   return (
     <>
@@ -25,6 +24,4 @@ export const App = () => {
       </main>
     </>
   );
-}
-
-
+};
