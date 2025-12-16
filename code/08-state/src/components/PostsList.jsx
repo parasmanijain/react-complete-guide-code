@@ -1,8 +1,8 @@
-import Post from './Post';
-import NewPost from './NewPost';
-import classes from './PostsList.module.css';
+import { Post } from "./Post";
+import { NewPost } from "./NewPost";
+import classes from "./PostsList.module.css";
 
-export const PostsList() {
+export const PostsList = () => {
   return (
     <>
       <NewPost />
@@ -12,6 +12,4 @@ export const PostsList() {
       </ul>
     </>
   );
-}
-
-
+};

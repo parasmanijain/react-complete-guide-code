@@ -1,12 +1,10 @@
-import classes from './Post.module.css';
+import classes from "./Post.module.css";
 
-export const Post(props) {
+export const Post = (props) => {
   return (
     <li className={classes.post}>
       <p className={classes.author}>{props.author}</p>
       <p className={classes.text}>{props.body}</p>
     </li>
   );
-}
-
-
+};

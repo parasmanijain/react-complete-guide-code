@@ -1,6 +1,6 @@
-import classes from './Modal.module.css';
+import classes from "./Modal.module.css";
 
-export const Modal({ children, onClose }) {
+export const Modal = ({ children, onClose }) => {
   return (
     <>
       <div className={classes.backdrop} onClick={onClose} />
@@ -9,6 +9,4 @@ export const Modal({ children, onClose }) {
       </dialog>
     </>
   );
-}
-
-export default Modal;
+};

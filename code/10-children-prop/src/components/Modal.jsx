@@ -1,6 +1,6 @@
-import classes from './Modal.module.css';
+import classes from "./Modal.module.css";
 
-export const Modal({ children }) {
+export const Modal = ({ children }) => {
   return (
     <>
       <div className={classes.backdrop} />
@@ -9,6 +9,4 @@ export const Modal({ children }) {
       </dialog>
     </>
   );
-}
-
-export default Modal;
+};

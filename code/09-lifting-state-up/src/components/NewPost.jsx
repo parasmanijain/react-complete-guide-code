@@ -1,11 +1,11 @@
-import classes from './NewPost.module.css';
+import classes from "./NewPost.module.css";
 
-export const NewPost(props) {
+export const NewPost = (props) => {
   return (
     <form className={classes.form}>
       <p>
         <label htmlFor="body">Text</label>
-        <textarea id="body" required rows={3} onChange={props.onBodyChange}/>
+        <textarea id="body" required rows={3} onChange={props.onBodyChange} />
       </p>
       <p>
         <label htmlFor="name">Your name</label>
@@ -13,6 +13,4 @@ export const NewPost(props) {
       </p>
     </form>
   );
-}
-
-
+};

@@ -19,4 +19,4 @@ export const MainHeader({ onCreatePost }) {
   );
 }
 
-export default MainHeader;
+

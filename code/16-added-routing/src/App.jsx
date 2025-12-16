@@ -3,14 +3,14 @@ import { useState } from 'react';
 import PostsList from './components/PostsList';
 import MainHeader from './components/MainHeader';
 
-export const App() {
+export const App = () => {
   const [modalIsVisible, setModalIsVisible] = useState(false);
 
-  export const showModalHandler() {
+  const showModalHandler = () =>{
     setModalIsVisible(true);
   }
 
-  export const hideModalHandler() {
+  const hideModalHandler = () => {
     setModalIsVisible(false);
   }
 

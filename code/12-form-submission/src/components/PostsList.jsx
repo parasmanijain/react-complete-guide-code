@@ -1,11 +1,9 @@
-import { useState } from 'react';
+import { Post } from "./Post";
+import { NewPost } from "./NewPost";
+import { Modal } from "./Modal";
+import classes from "./PostsList.module.css";
 
-import Post from './Post';
-import NewPost from './NewPost';
-import Modal from './Modal';
-import classes from './PostsList.module.css';
-
-export const PostsList({ isPosting, onStopPosting }) {
+export const PostsList = ({ isPosting, onStopPosting }) => {
   return (
     <>
       {isPosting && (
@@ -18,6 +16,4 @@ export const PostsList({ isPosting, onStopPosting }) {
       </ul>
     </>
   );
-}
-
-
+};
