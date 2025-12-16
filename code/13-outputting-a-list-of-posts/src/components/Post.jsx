@@ -1,6 +1,6 @@
 import classes from './Post.module.css';
 
-function Post({ author, body }) {
+export const Post({ author, body }) {
   return (
     <li className={classes.post}>
       <p className={classes.author}>{author}</p>
@@ -9,4 +9,4 @@ function Post({ author, body }) {
   );
 }
 
-export default Post;
+

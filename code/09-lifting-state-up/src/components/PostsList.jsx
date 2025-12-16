@@ -4,15 +4,15 @@ import Post from './Post';
 import NewPost from './NewPost';
 import classes from './PostsList.module.css';
 
-function PostsList() {
+export const PostsList() {
   const [enteredBody, setEnteredBody] = useState('');
   const [enteredAuthor, setEnteredAuthor] = useState('');
 
-  function bodyChangeHandler(event) {
+  export const bodyChangeHandler(event) {
     setEnteredBody(event.target.value);
   }
 
-  function authorChangeHandler(event) {
+  export const authorChangeHandler(event) {
     setEnteredAuthor(event.target.value);
   }
 
@@ -27,4 +27,4 @@ function PostsList() {
   );
 }
 
-export default PostsList;
+

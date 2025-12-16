@@ -1,15 +1,15 @@
-import classes from './NewPost.module.css';
+import classes from "./NewPost.module.css";
 
-function NewPost() {
-  function changeBodyHandler(event) {
+export const NewPost = () => {
+  const changeBodyHandler = (event) => {
     console.log(event.target.value);
-  }
+  };
 
   return (
     <form className={classes.form}>
       <p>
         <label htmlFor="body">Text</label>
-        <textarea id="body" required rows={3} onChange={changeBodyHandler}/>
+        <textarea id="body" required rows={3} onChange={changeBodyHandler} />
       </p>
       <p>
         <label htmlFor="name">Your name</label>
@@ -17,6 +17,4 @@ function NewPost() {
       </p>
     </form>
   );
-}
-
-export default NewPost;
+};

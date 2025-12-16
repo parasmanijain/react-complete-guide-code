@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 
 import classes from './Post.module.css';
 
-function Post({ id, author, body }) {
+export const Post({ id, author, body }) {
   return (
     <li className={classes.post}>
       <Link to={id}>
@@ -13,4 +13,4 @@ function Post({ id, author, body }) {
   );
 }
 
-export default Post;
+

@@ -5,7 +5,7 @@ import NewPost from './NewPost';
 import Modal from './Modal';
 import classes from './PostsList.module.css';
 
-function PostsList({ isPosting, onStopPosting }) {
+export const PostsList({ isPosting, onStopPosting }) {
   return (
     <>
       {isPosting && (
@@ -20,4 +20,4 @@ function PostsList({ isPosting, onStopPosting }) {
   );
 }
 
-export default PostsList;
+

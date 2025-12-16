@@ -2,19 +2,19 @@ import { useState } from 'react';
 
 import classes from './NewPost.module.css';
 
-function NewPost({ onCancel }) {
+export const NewPost({ onCancel }) {
   const [enteredBody, setEnteredBody] = useState('');
   const [enteredAuthor, setEnteredAuthor] = useState('');
 
-  function bodyChangeHandler(event) {
+  export const bodyChangeHandler(event) {
     setEnteredBody(event.target.value);
   }
 
-  function authorChangeHandler(event) {
+  export const authorChangeHandler(event) {
     setEnteredAuthor(event.target.value);
   }
 
-  function submitHandler(event) {
+  export const submitHandler(event) {
     event.preventDefault();
     const postData = {
       body: enteredBody,
@@ -44,4 +44,4 @@ function NewPost({ onCancel }) {
   );
 }
 
-export default NewPost;
+

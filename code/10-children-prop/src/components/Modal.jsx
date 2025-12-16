@@ -1,6 +1,6 @@
 import classes from './Modal.module.css';
 
-function Modal({ children }) {
+export const Modal({ children }) {
   return (
     <>
       <div className={classes.backdrop} />

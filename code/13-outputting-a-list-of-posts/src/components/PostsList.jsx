@@ -5,10 +5,10 @@ import NewPost from './NewPost';
 import Modal from './Modal';
 import classes from './PostsList.module.css';
 
-function PostsList({ isPosting, onStopPosting }) {
+export const PostsList({ isPosting, onStopPosting }) {
   const [posts, setPosts] = useState([]);
 
-  function addPostHandler(postData) {
+  export const addPostHandler(postData) {
     setPosts((existingPosts) => [postData, ...existingPosts]);
   }
 
@@ -36,4 +36,4 @@ function PostsList({ isPosting, onStopPosting }) {
   );
 }
 
-export default PostsList;
+

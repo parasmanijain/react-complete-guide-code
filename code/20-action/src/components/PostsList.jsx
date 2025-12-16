@@ -3,7 +3,7 @@ import { useLoaderData } from 'react-router-dom';
 import Post from './Post';
 import classes from './PostsList.module.css';
 
-function PostsList() {
+export const PostsList() {
   const posts = useLoaderData();
 
   return (
@@ -25,4 +25,4 @@ function PostsList() {
   );
 }
 
-export default PostsList;
+

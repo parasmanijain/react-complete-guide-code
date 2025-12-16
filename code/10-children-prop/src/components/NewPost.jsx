@@ -1,6 +1,6 @@
 import classes from './NewPost.module.css';
 
-function NewPost(props) {
+export const NewPost(props) {
   return (
     <form className={classes.form}>
       <p>
@@ -15,4 +15,4 @@ function NewPost(props) {
   );
 }
 
-export default NewPost;
+

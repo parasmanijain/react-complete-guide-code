@@ -2,7 +2,7 @@ import { Outlet } from 'react-router-dom';
 
 import PostsList from '../components/PostsList';
 
-function Posts() {
+export const Posts() {
   return (
     <>
       <Outlet />

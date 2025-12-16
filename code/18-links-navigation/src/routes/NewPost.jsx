@@ -4,19 +4,19 @@ import { Link } from 'react-router-dom';
 import classes from './NewPost.module.css';
 import Modal from '../components/Modal';
 
-function NewPost({ onAddPost }) {
+export const NewPost({ onAddPost }) {
   const [enteredBody, setEnteredBody] = useState('');
   const [enteredAuthor, setEnteredAuthor] = useState('');
 
-  function bodyChangeHandler(event) {
+  export const bodyChangeHandler(event) {
     setEnteredBody(event.target.value);
   }
 
-  function authorChangeHandler(event) {
+  export const authorChangeHandler(event) {
     setEnteredAuthor(event.target.value);
   }
 
-  function submitHandler(event) {
+  export const submitHandler(event) {
     event.preventDefault();
     const postData = {
       body: enteredBody,
@@ -53,4 +53,4 @@ function NewPost({ onAddPost }) {
   );
 }
 
-export default NewPost;
+

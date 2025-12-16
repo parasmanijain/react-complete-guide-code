@@ -5,11 +5,11 @@ import NewPost from './NewPost';
 import Modal from './Modal';
 import classes from './PostsList.module.css';
 
-function PostsList({ isPosting, onStopPosting }) {
+export const PostsList({ isPosting, onStopPosting }) {
   const [posts, setPosts] = useState([]);
 
   useEffect(() => {
-    async function fetchPosts() {
+    async export const fetchPosts() {
       const response = await fetch('http://localhost:8080/posts')
       const resData = await response.json();
       setPosts(resData.posts);
@@ -18,7 +18,7 @@ function PostsList({ isPosting, onStopPosting }) {
     fetchPosts();
   }, []);
 
-  function addPostHandler(postData) {
+  export const addPostHandler(postData) {
     fetch('http://localhost:8080/posts', {
       method: 'POST',
       body: JSON.stringify(postData),
@@ -53,4 +53,4 @@ function PostsList({ isPosting, onStopPosting }) {
   );
 }
 
-export default PostsList;
+

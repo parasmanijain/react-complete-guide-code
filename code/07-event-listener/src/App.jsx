@@ -1,11 +1,9 @@
-import PostsList from './components/PostsList';
+import { PostsList } from "./components/PostsList";
 
-function App() {
+export const App = () => {
   return (
     <main>
       <PostsList />
     </main>
   );
-}
-
-export default App;
+};

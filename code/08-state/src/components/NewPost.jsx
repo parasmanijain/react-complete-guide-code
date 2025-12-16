@@ -2,10 +2,10 @@ import { useState } from 'react';
 
 import classes from './NewPost.module.css';
 
-function NewPost() {
+export const NewPost() {
   const [ enteredBody, setEnteredBody ] = useState('');
 
-  function changeBodyHandler(event) {
+  export const changeBodyHandler(event) {
     setEnteredBody(event.target.value);
   }
 
@@ -24,4 +24,4 @@ function NewPost() {
   );
 }
 
-export default NewPost;
+

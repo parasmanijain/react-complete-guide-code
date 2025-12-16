@@ -1,7 +1,7 @@
-import Post from './components/Post';
+import {Post} from './components/Post';
 
-function App() {
+export const App = () => {
   return <Post />;
 }
 
-export default App;
+

@@ -3,12 +3,12 @@ import { useState, useEffect } from 'react';
 import Post from './Post';
 import classes from './PostsList.module.css';
 
-function PostsList() {
+export const PostsList() {
   const [posts, setPosts] = useState([]);
   const [isFetching, setIsFetching] = useState(false);
 
   useEffect(() => {
-    async function fetchPosts() {
+    async export const fetchPosts() {
       setIsFetching(true);
       const response = await fetch('http://localhost:8080/posts');
       const resData = await response.json();
@@ -19,7 +19,7 @@ function PostsList() {
     fetchPosts();
   }, []);
 
-  function addPostHandler(postData) {
+  export const addPostHandler(postData) {
     fetch('http://localhost:8080/posts', {
       method: 'POST',
       body: JSON.stringify(postData),
@@ -54,4 +54,4 @@ function PostsList() {
   );
 }
 
-export default PostsList;
+

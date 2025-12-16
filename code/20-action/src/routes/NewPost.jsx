@@ -3,7 +3,7 @@ import { Link, Form, redirect } from 'react-router-dom';
 import classes from './NewPost.module.css';
 import Modal from '../components/Modal';
 
-function NewPost() {
+export const NewPost() {
   return (
     <Modal>
       <Form method='post' className={classes.form}>
@@ -26,9 +26,9 @@ function NewPost() {
   );
 }
 
-export default NewPost;
 
-export async function action({request}) {
+
+export async export const action({request}) {
   const formData = await request.formData();
   const postData = Object.fromEntries(formData); // { body: '...', author: '...' }
   await fetch('http://localhost:8080/posts', {

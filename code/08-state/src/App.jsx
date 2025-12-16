@@ -1,6 +1,6 @@
 import PostsList from './components/PostsList';
 
-function App() {
+export const App() {
   return (
     <main>
       <PostsList />
@@ -8,4 +8,4 @@ function App() {
   );
 }
 
-export default App;
+

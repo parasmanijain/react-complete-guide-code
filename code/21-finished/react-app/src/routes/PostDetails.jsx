@@ -3,7 +3,7 @@ import { useLoaderData, Link } from 'react-router-dom';
 import Modal from '../components/Modal';
 import classes from './PostDetails.module.css';
 
-function PostDetails() {
+export const PostDetails() {
   const post = useLoaderData();
 
   if (!post) {
@@ -33,7 +33,7 @@ function PostDetails() {
 
 export default PostDetails;
 
-export async function loader({params}) {
+export async export const loader({params}) {
   const response = await fetch('http://localhost:8080/posts/' + params.postId);
   const resData = await response.json();
   return resData.post;

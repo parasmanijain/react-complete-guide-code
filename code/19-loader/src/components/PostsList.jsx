@@ -3,10 +3,10 @@ import { useLoaderData } from 'react-router-dom';
 import Post from './Post';
 import classes from './PostsList.module.css';
 
-function PostsList() {
+export const PostsList() {
   const posts = useLoaderData();
 
-  function addPostHandler(postData) {
+  export const addPostHandler(postData) {
     fetch('http://localhost:8080/posts', {
       method: 'POST',
       body: JSON.stringify(postData),
@@ -36,4 +36,4 @@ function PostsList() {
   );
 }
 
-export default PostsList;
+
