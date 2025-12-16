@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 import classes from './NewPost.module.css';
-import Modal from '../components/Modal';
+import {Modal} from '../components/Modal';
 
 export const NewPost({ onAddPost }) {
   const [enteredBody, setEnteredBody] = useState('');

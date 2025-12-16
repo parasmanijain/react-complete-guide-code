@@ -1,5 +1,4 @@
 import { useState } from "react";
-
 import classes from "./NewPost.module.css";
 
 export const NewPost = ({ onCancel, onAddPost }) => {

@@ -1,19 +1,18 @@
-import { useState } from 'react';
+import { useState } from "react";
+import classes from "./NewPost.module.css";
+import {Modal} from "../components/Modal";
 
-import classes from './NewPost.module.css';
-import Modal from '../components/Modal';
+export const NewPost = ({ onCancel, onAddPost }) => {
+  const [enteredBody, setEnteredBody] = useState("");
+  const [enteredAuthor, setEnteredAuthor] = useState("");
 
-export const NewPost({ onCancel, onAddPost }) {
-  const [enteredBody, setEnteredBody] = useState('');
-  const [enteredAuthor, setEnteredAuthor] = useState('');
-
-   const bodyChangeHandler = (event) => {
+  const bodyChangeHandler = (event) => {
     setEnteredBody(event.target.value);
-  }
+  };
 
   const authorChangeHandler = (event) => {
     setEnteredAuthor(event.target.value);
-  }
+  };
 
   const submitHandler = (event) => {
     event.preventDefault();
@@ -23,7 +22,7 @@ export const NewPost({ onCancel, onAddPost }) {
     };
     onAddPost(postData);
     onCancel();
-  }
+  };
 
   return (
     <Modal>
@@ -50,6 +49,4 @@ export const NewPost({ onCancel, onAddPost }) {
       </form>
     </Modal>
   );
-}
-
-
+};

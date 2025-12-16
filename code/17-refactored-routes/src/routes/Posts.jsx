@@ -1,8 +1,7 @@
-import { Outlet } from 'react-router-dom';
+import { Outlet } from "react-router-dom";
+import { PostsList } from "../components/PostsList";
 
-import PostsList from '../components/PostsList';
-
-export const Posts() {
+export const Posts = () => {
   return (
     <>
       <Outlet />
@@ -11,6 +10,4 @@ export const Posts() {
       </main>
     </>
   );
-}
-
-export default Posts;
+};

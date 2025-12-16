@@ -1,20 +1,19 @@
-import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { useState } from "react";
+import { Link } from "react-router-dom";
+import classes from "./NewPost.module.css";
+import { Modal } from "../components/Modal";
 
-import classes from './NewPost.module.css';
-import Modal from '../components/Modal';
+export const NewPost = ({ onAddPost }) => {
+  const [enteredBody, setEnteredBody] = useState("");
+  const [enteredAuthor, setEnteredAuthor] = useState("");
 
-export const NewPost({ onAddPost }) {
-  const [enteredBody, setEnteredBody] = useState('');
-  const [enteredAuthor, setEnteredAuthor] = useState('');
-
-   const bodyChangeHandler = (event) => {
+  const bodyChangeHandler = (event) => {
     setEnteredBody(event.target.value);
-  }
+  };
 
   const authorChangeHandler = (event) => {
     setEnteredAuthor(event.target.value);
-  }
+  };
 
   const submitHandler = (event) => {
     event.preventDefault();
@@ -24,7 +23,7 @@ export const NewPost({ onAddPost }) {
     };
     onAddPost(postData);
     onCancel();
-  }
+  };
 
   return (
     <Modal>
@@ -51,6 +50,4 @@ export const NewPost({ onAddPost }) {
       </form>
     </Modal>
   );
-}
-
-
+};

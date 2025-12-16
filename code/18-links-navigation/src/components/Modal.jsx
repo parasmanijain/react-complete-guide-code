@@ -1,13 +1,12 @@
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
+import classes from "./Modal.module.css";
 
-import classes from './Modal.module.css';
-
-export const Modal({ children }) {
+export const Modal = ({ children }) => {
   const navigate = useNavigate();
 
-  export const closeHandler() {
-    navigate('..');
-  }
+  const closeHandler = () => {
+    navigate("..");
+  };
 
   return (
     <>
@@ -17,6 +16,4 @@ export const Modal({ children }) {
       </dialog>
     </>
   );
-}
-
-
+};

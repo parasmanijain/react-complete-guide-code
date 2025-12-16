@@ -5,7 +5,7 @@ import classes from './Modal.module.css';
 export const Modal({ children }) {
   const navigate = useNavigate();
 
-  export const closeHandler() {
+  const closeHandler = () => {
     navigate('..');
   }
 
